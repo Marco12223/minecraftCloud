@@ -31,6 +31,7 @@ class getLogger{
     setLoggerId(loggerId) {
 
         this.loggerId = loggerId
+        this.info(`Currently loggerId: ${loggerId}`)
 
     }
 
