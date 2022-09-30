@@ -23,8 +23,8 @@ class getLogger{
 
     writeLog(loggerId, message) {
 
-        fs.appendFileSync("./last_log.log", message, function(err) {if (err) throw err})
-        fs.appendFileSync(`./logs/${this.loggerId}.log`, message, function (err) {if(err) throw err})
+        fs.appendFileSync("./last_log.log", message + "\n", function(err) {if (err) throw err})
+        fs.appendFileSync(`./logs/${this.loggerId}.log`, message + "\n", function (err) {if(err) throw err})
 
     }
 
