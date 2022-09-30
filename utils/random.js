@@ -1,4 +1,4 @@
-class random {
+class Random {
 
     generateRandomString(length) {
         var result           = '';
@@ -14,4 +14,4 @@ class random {
 
 }
 
-module.exports = {random}
+module.exports = {Random}
