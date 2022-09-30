@@ -5,6 +5,12 @@
     "expressPort": 3040,
     "expressHost": "localhost"
 
+  },
+
+  "websocket": {
+
+    "websocketPort": 3041
+
   }
 
 }
