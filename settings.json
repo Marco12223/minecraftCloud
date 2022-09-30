@@ -1,0 +1,10 @@
+{
+
+  "express": {
+
+    "expressPort": 3040,
+    "expressHost": "localhost"
+
+  }
+
+}
