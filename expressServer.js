@@ -11,8 +11,6 @@ const {Random} = require("./utils/random");
 
 var expressServer = express();
 var logger = new getLogger()
-let rawdata = fs.readFileSync('./settings.json');
-let settings = JSON.parse(rawdata);
 
 // view engine setup
 expressServer.set('views', path.join(__dirname, 'views'));
@@ -42,13 +40,5 @@ expressServer.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-expressServer.listen(settings["express"]["expressPort"], settings["express"]["expressHost"], function() {
-
-  logger.info(`Currently loggerId: ${loggerId}`)
-  logger.info("Starting websocket...")
-  logger.info(`Websocket is listing on http://${settings["express"]["expressHost"]}:${settings["express"]["expressPort"]}/`)
-
-})
 
 module.exports = expressServer;
